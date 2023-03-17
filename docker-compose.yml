@@ -1,12 +1,13 @@
 version: "3.9"
 services:
   norgpt3:
+    container_name: "megatron"
     build: .
     # restart: always
     ports:
       - "7779:6000"
     volumes:
-      - ./data/all/models/nor_gpt3:/models/nor_gpt3
+      - /home/alexander/dev/models/nor_gpt3:/models/nor_gpt3
     deploy:
       resources:
         reservations:
